@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<section class="prediction-result">
+
+    <div class="result-card">
+
+        <h1><i class="fa-solid fa-circle-check"></i> Prediction Result</h1>
+
+        <div class="result-box">
+            <h2>{{ prediction }}</h2>
+        </div>
+
+        <h3>Applicant Details</h3>
+
+        <table class="result-table">
+
+            <tr>
+                <td>Full Name</td>
+                <td>{{ fullname }}</td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>{{ gender }}</td>
+            </tr>
+
+            <tr>
+                <td>Annual Income</td>
+                <td>{{ income }}</td>
+            </tr>
+
+            <tr>
+                <td>Income Type</td>
+                <td>{{ income_type }}</td>
+            </tr>
+
+            <tr>
+                <td>Education</td>
+                <td>{{ education }}</td>
+            </tr>
+
+            <tr>
+                <td>Family Status</td>
+                <td>{{ family_status }}</td>
+            </tr>
+
+            <tr>
+                <td>Housing Type</td>
+                <td>{{ housing }}</td>
+            </tr>
+
+            <tr>
+                <td>Employment Days</td>
+                <td>{{ employment }}</td>
+            </tr>
+
+            <tr>
+                <td>Own Car</td>
+                <td>{{ car }}</td>
+            </tr>
+
+            <tr>
+                <td>Own Property</td>
+                <td>{{ property }}</td>
+            </tr>
+
+        </table>
+
+        <div class="result-buttons">
+
+            <a href="/prediction" class="predict-btn">
+                <i class="fa-solid fa-rotate"></i>
+                Predict Again
+            </a>
+
+            <a href="/" class="predict-btn">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>
